@@ -52,24 +52,23 @@
           <thead>
             <tr>
               <th>ID</th>
-              <th>Nombres</th>
-              <th>Apellidos</th>
-              <th>Cedula</th>
-              <th>Edad</th>
-              <th>Pais</th>
-              <th>Estado o Departamento</th>
-              <th>Acciones</th>
+              <th>Area</th>
+              <th>Cargo</th>
+              <th>Correo</th>
+              <th>Fecha inicio</th>
+              <th>Fecha fin</th>
+              <th>Salario</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let item of empleados">
               <td>{{item.id}}</td>
-              <td>{{item.nombre}}</td>
-              <td>{{item.apellido}}</td>
-              <td>{{item.cedula}}</td>
-              <td>{{item.edad}}</td>
-              <td>{{item.dni.nombre}}</td>
-              <td>{{item.estado.nombre}}</td>
+              <td>{{item.area}}</td>
+              <td>{{item.cargo}}</td>
+              <td>{{item.correo_corp}}</td>
+              <td>{{item.fcha_inicio}}</td>
+              <td>{{item.fcha_fin}}</td>
+              <td>{{item.salario}}</td>
               <td>
                 <button type="button" class="btn btn-dark" (click)="Eliminar(item)">Eliminar</button>
                 <button type="button" class="btn btn-warning" (click)="Editar(item)">Editar</button>

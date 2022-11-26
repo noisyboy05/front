@@ -6,35 +6,35 @@
             <div class="container">
                
           <div class="form-group">
-            <label>Nombres</label>
-            <input type="text" formControlName="nombre" class="form-control">
+            <label>Empresa</label>
+            <input type="text" formControlName="empresa" class="form-control">
           </div>
         
         
           <div class="form-group">
-            <label>Apellidos</label>
-            <input type="text" formControlName="apellido" class="form-control">
+            <label>Area</label>
+            <input type="text" formControlName="area" class="form-control">
           </div>
         
           <div class="form-group">
-            <label>Sexo</label>
-            <input type="text" formControlName="sexo" class="form-control">
+            <label>Cargo</label>
+            <input type="text" formControlName="cargo" class="form-control">
           </div>
           <div class="form-group">
-            <label>Fecha Nacimiento</label>
-            <input type="text" formControlName="fnacimiento" class="form-control">
+            <label>Fecha inicio</label>
+            <input type="text" formControlName="fcha_inicio" class="form-control">
           </div>
           <div class="form-group">
-            <label>Direccion</label>
-            <input type="text" formControlName="direccion" class="form-control">
+            <label>Fecha fin</label>
+            <input type="text" formControlName="fcha_fin" class="form-control">
           </div>
           <div class="form-group">
-            <label>Correo</label>
-            <input type="text" formControlName="correo" class="form-control">
+            <label>Salario</label>
+            <input type="number" formControlName="salario" class="form-control">
           </div>
           <div class="form-group">
-            <label>Ciudad</label>
-            <input type="text" formControlName="ciudad" class="form-control">
+            <label>Correo corp</label>
+            <input type="text" formControlName="correo_corp" class="form-control">
           </div>
           <div class="form-group">
             <label>DNI</label>
@@ -43,17 +43,18 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Cedula</label>
-            <input type="number" formControlName="cedula" class="form-control">
+            <label>Horario</label>
+            <select name="horario" id="horario" formControlName="horario" class="form-control" >
+              <option [ngValue]="item" *ngFor="let item of horarios">{{item.nombre}}</option>
+            </select>
           </div>
           <div class="form-group">
-            <label>Estado Civil</label>
-            <select name="estado" id="estado" formControlName="estado" class="form-control" >
-              <option [ngValue]="item" *ngFor="let item of estados">{{item.nombre}}</option>
+            <label>Tipo contrato</label>
+            <select name="contratos" id="contratos" formControlName="contratos" class="form-control" >
+              <option [ngValue]="item" *ngFor="let item of contratos">{{item.nombre}}</option>
             </select>
           </div>      
-      
-          <button type="submit" class="btn btn-primary" style="margin-top: 1rem;" [disabled]="empleadoForm.invalid">Guardar</button>
+          <button type="submit" class="btn btn-primary" style="margin-top: 1rem;" >Guardar</button>
         </div>
           </form>
         
